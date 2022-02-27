@@ -6,10 +6,10 @@
     "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
+    "canvas": "^2.9.0",
     "nuxt3": "latest"
   },
   "dependencies": {
-    "canvas": "^2.9.0",
     "konva": "^8.3.3",
     "path": "^0.12.7"
   }
