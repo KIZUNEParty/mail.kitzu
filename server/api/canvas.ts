@@ -140,6 +140,14 @@ export default async (req, res) => {
     })
 
     // Kill Process
+    stage.getLayers().map((layer) => {
+        layer.children?.map((child) => {
+          child.destroy();
+        });
+        layer.destroy();
+      });
+    
+      stage.destroy();
 
     // RSP
     appendHeader(res, 'content-type', 'image/png');
