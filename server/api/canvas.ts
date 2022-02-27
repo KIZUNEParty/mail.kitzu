@@ -65,7 +65,7 @@ export default async (req, res) => {
 
     let bottom = new konva.Rect({
         x: 10,
-        y: h - 10,
+        y: h - 10 - 3,
         width: w - 20,
         height: 3,
         fill: 'white'
@@ -80,7 +80,7 @@ export default async (req, res) => {
     })
 
     let right = new konva.Rect({
-        x: w-10,
+        x: w-10-3,
         y: 10,
         height: h-20,
         width: 3,
