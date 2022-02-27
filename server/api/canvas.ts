@@ -1,13 +1,19 @@
 import { appendHeader, useQuery } from 'h3'
 
-import canvas from 'canvas'
 import konva from 'konva'
+import canvas from 'canvas'
 
-// const { pixelRatio } = canvas;
+const { loadImage } = canvas;
+
+const BGCall = [
+    `./bg1.jpeg`,
+    `./bg2.jpeg`,
+    `./bg3.jpeg`,
+]
 
 export default async (req, res) => {
     // const
-    const BG = ''
+    const BG = BGCall[BGCall.length * Math.random() | 0]
     const lc = 'making with <3 by katchan'
 
     const w = 800;
@@ -23,7 +29,18 @@ export default async (req, res) => {
     let layer = new konva.Layer()
 
     // Bg
-    
+    let bgPrint: konva.Image;
+    let image = await loadImage(BG) as any;
+    bgPrint = new konva.Image({
+        x: 0,
+        y: 0,
+        image,
+        width: w,
+        height: h
+    });
+
+    layer.add(bgPrint);
+
     // Frame
 
     // Logo
