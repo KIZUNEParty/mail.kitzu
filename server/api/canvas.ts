@@ -6,9 +6,9 @@ import canvas from 'canvas'
 const { loadImage } = canvas;
 
 const BGCall = [
-    `./bg1.jpeg`,
-    `./bg2.jpeg`,
-    `./bg3.jpeg`,
+    `https://raw.githubusercontent.com/KIZUNEParty/mail.kitzu/main/public/bg1.jpeg`,
+    `https://raw.githubusercontent.com/KIZUNEParty/mail.kitzu/main/public/bg2.jpeg`,
+    `https://raw.githubusercontent.com/KIZUNEParty/mail.kitzu/main/public/bg3.jpeg`,
 ]
 
 export default async (req, res) => {
