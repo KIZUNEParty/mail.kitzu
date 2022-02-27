@@ -1,7 +1,7 @@
 <template>
     <div class="app">
         <div>
-            <img src="/api/canvas" alt="canvas">
+            <img :src="`/api/canvas`" alt="canvas">
         </div>
     </div>
 </template>
