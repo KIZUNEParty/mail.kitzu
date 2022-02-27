@@ -22,3 +22,15 @@ img {
     top: calc(50% - 300px);
 }
 </style>
+
+<script setup>
+    useMeta({
+        title: 'k1tzu MAIL',
+        meta: [
+            {
+                name: 'viewport',
+                content: 'width=device-width, initial-scale=1, maximum-scale=1',
+            }
+        ]
+    })
+</script>
