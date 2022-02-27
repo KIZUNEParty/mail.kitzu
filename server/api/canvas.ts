@@ -2,19 +2,22 @@ import { appendHeader, useQuery } from 'h3'
 
 import konva from 'konva'
 import canvas from 'canvas'
+import path from 'path'
 
 const { loadImage, registerFont } = canvas;
+
+const assetPrefix = path.join(process.cwd(), '/public');
+
+registerFont(`${assetPrefix}/UbuntuCondensed-Regular.ttf`, {
+    family: 'UbuntuCondensed',
+    weight: '400'
+})
 
 const BGCall = [
     `https://raw.githubusercontent.com/KIZUNEParty/mail.kitzu/main/public/bg1.jpeg`,
     `https://raw.githubusercontent.com/KIZUNEParty/mail.kitzu/main/public/bg2.jpeg`,
     `https://raw.githubusercontent.com/KIZUNEParty/mail.kitzu/main/public/bg3.jpeg`,
 ]
-
-registerFont('https://cdn.jsdelivr.net/gh/KIZUNEParty/mail.kitzu@main/public/UbuntuCondensed-Regular.ttf', {
-    family: 'UbuntuCondensed-Regular',
-    weight: '400'
-})
 
 export default async (req, res) => {
     // const
@@ -100,7 +103,20 @@ export default async (req, res) => {
     // Logo
 
     // Bottom Text
-    
+    let lcText = new konva.Text({
+        align: 'right',
+        verticalAlign: 'middle',
+        x: 0,
+        y: h-40,
+        width: w-15,
+        height: 20,
+        text: lc,
+        fontFamily: 'UbuntuCondensed',
+        fontSize: 20,
+        fill: 'whitesmoke'
+    })
+
+    layer.add(lcText)
 
     // Buffer
     const mail = await new Promise<string>((resolve, reject) => {
