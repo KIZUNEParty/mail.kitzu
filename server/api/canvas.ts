@@ -46,6 +46,42 @@ export default async (req, res) => {
     layer.add(bgPrint);
 
     // Frame
+    let top = new konva.Rect({
+        x: 10,
+        y: 10,
+        width: w - 20,
+        height: 3,
+        fill: 'white'
+    })
+
+    let bottom = new konva.Rect({
+        x: 10,
+        y: h - 10,
+        width: w - 20,
+        height: 3,
+        fill: 'white'
+    })
+
+    let left = new konva.Rect({
+        x: 10,
+        y: 10,
+        height: h-20,
+        width: 3,
+        fill: 'white'
+    })
+
+    let right = new konva.Rect({
+        x: w-10,
+        y: 10,
+        height: h-20,
+        width: 3,
+        fill: 'white'
+    })
+
+    layer.add(top);
+    layer.add(bottom);
+    layer.add(left);
+    layer.add(right);
 
     // Logo
 
