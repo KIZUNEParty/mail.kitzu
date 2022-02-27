@@ -2568,6 +2568,11 @@ knitwork@^0.1.0:
   resolved "https://registry.yarnpkg.com/knitwork/-/knitwork-0.1.0.tgz#9495fde93d2390bcfa7439292fe8a44447f7fc67"
   integrity sha512-veAmNJu4Niku+zjm2//+xLGsYTwB8OP1jBHjPU5RbQu9Jl263d5PtbM0OaITlYvhLFLov/R12hs0GL4ujzMY3A==
 
+konva@^8.3.3:
+  version "8.3.3"
+  resolved "https://registry.yarnpkg.com/konva/-/konva-8.3.3.tgz#409c811a7aa474e075e8928b8a931cf12d4dd517"
+  integrity sha512-S/v9JW3gNr4mweRwk4JLiJSnQAWs3aZBU4SY9pXGgCFxIvSDbKTnXTDYb2IMxFnurh3ItiR249RG0NvozHd1OA==
+
 lazystream@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/lazystream/-/lazystream-1.0.1.tgz#494c831062f1f9408251ec44db1cba29242a2638"
