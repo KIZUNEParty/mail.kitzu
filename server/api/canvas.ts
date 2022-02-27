@@ -43,7 +43,16 @@ export default async (req, res) => {
 
     console.log(BG);
     
+    let ovl = new konva.Rect({
+        x: 0,
+        y: 0,
+        width: w,
+        height: h,
+        fill: 'rgba(0, 0, 0, 0.4)'
+    })
+
     layer.add(bgPrint);
+    layer.add(ovl);
 
     // Frame
     let top = new konva.Rect({
