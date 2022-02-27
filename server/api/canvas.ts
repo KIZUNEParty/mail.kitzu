@@ -101,6 +101,17 @@ export default async (req, res) => {
     layer.add(right);
 
     // Logo
+    let logo: konva.Image
+    let logoIMG = await loadImage(`${assetPrefix}/logo-mail.png`) as any
+    logo = new konva.Image({
+        x: 15,
+        y: 15,
+        image: logoIMG,
+        width: 800,
+        height: 600
+    })
+
+    layer.add(logo)
 
     // Bottom Text
     let lcText = new konva.Text({
