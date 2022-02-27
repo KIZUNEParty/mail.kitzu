@@ -3,13 +3,18 @@ import { appendHeader, useQuery } from 'h3'
 import konva from 'konva'
 import canvas from 'canvas'
 
-const { loadImage } = canvas;
+const { loadImage, registerFont } = canvas;
 
 const BGCall = [
     `https://raw.githubusercontent.com/KIZUNEParty/mail.kitzu/main/public/bg1.jpeg`,
     `https://raw.githubusercontent.com/KIZUNEParty/mail.kitzu/main/public/bg2.jpeg`,
     `https://raw.githubusercontent.com/KIZUNEParty/mail.kitzu/main/public/bg3.jpeg`,
 ]
+
+registerFont('https://cdn.jsdelivr.net/gh/KIZUNEParty/mail.kitzu@main/public/UbuntuCondensed-Regular.ttf', {
+    family: 'UbuntuCondensed-Regular',
+    weight: '400'
+})
 
 export default async (req, res) => {
     // const
@@ -95,6 +100,7 @@ export default async (req, res) => {
     // Logo
 
     // Bottom Text
+    
 
     // Buffer
     const mail = await new Promise<string>((resolve, reject) => {
