@@ -28,6 +28,8 @@ export default async (req, res) => {
 
     let layer = new konva.Layer()
 
+    stage.add(layer)
+
     // Bg
     let bgPrint: konva.Image;
     let image = await loadImage(BG) as any;
@@ -39,6 +41,8 @@ export default async (req, res) => {
         height: h
     });
 
+    console.log(BG);
+    
     layer.add(bgPrint);
 
     // Frame
